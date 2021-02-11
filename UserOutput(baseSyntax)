@@ -1,0 +1,12 @@
+import React from 'react'
+
+const UserOutput = (props) => {
+    return(
+        <div>
+            <p>paragraph1: {props.username}</p>
+            <p>paragraph2</p>
+        </div>
+    )
+}
+
+export default UserOutput
