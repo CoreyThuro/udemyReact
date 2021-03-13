@@ -1,0 +1,12 @@
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Friend name="elton" hobbies={["Piano", "Singing", "Twerking"]} />
+        <Friend name="lumox" hobbies={["Oboe", "Omo", "Dworkin"]} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
