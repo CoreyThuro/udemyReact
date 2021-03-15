@@ -1,0 +1,53 @@
+--Machine.js --
+
+class Machine extends React.Component {
+	render() {
+		const { s1, s2, s3 } = this.props;
+		const winner = s1 === s2 && s2 === s3;
+		const colors = { fontSize: "50px", backgroundColor: "purple" };
+
+		return (
+			<div className="Machine">
+				<p style={colors}>
+					{s1} {s2} {s3}
+				</p>
+				<p className={winner ? 'win' : 'lose'}>{winner ? 'Winner!' : 'Loser!'}</p>
+			</div>
+		);
+	}
+}
+
+
+--index.js--
+
+class App extends React.Component {
+	render() {
+		return (
+			<div>
+				<h1>Slot Machines!</h1>
+				<Machine s1="🍒" s2="🍒" s3="🍒" />
+				<Machine s1="🍒" s2="🍊" s3="🍒" />
+			</div>
+		);
+	}
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
+--app.css--
+
+.Machine {
+	border: 2px solid black;
+	background: lightblue
+}
+
+.win{
+	color: white;
+	background: green;
+}
+
+.lose {
+	color: white;
+	background: red;
+}
